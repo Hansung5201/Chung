@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>퍼즐보블</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="game-wrapper">
+    <header class="hud">
+      <h1 class="title">퍼즐보블</h1>
+      <div class="score-board">
+        <span>점수:</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="next-bubble">
+        <span>다음 버블</span>
+        <canvas id="nextCanvas" width="70" height="70"></canvas>
+      </div>
+    </header>
+    <section class="canvas-container">
+      <canvas id="game" width="640" height="720" aria-label="퍼즐보블 게임판"></canvas>
+      <div class="help">
+        <p>← → 방향키로 조준, 스페이스 또는 클릭으로 발사!</p>
+        <p>동일 색 3개 이상 맞추면 제거됩니다.</p>
+        <p>버블이 아래선에 닿기 전에 모두 제거하세요.</p>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
