@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>웹 포토샵</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>웹 포토샵</h1>
+    <div class="primary-actions">
+      <button id="undoBtn" title="되돌리기 (Ctrl+Z)">↺</button>
+      <button id="redoBtn" title="다시하기 (Ctrl+Shift+Z)">↻</button>
+      <button id="clearBtn" title="현재 레이어 비우기">지우기</button>
+      <button id="downloadBtn" title="이미지 다운로드">내려받기</button>
+      <label class="file-input" title="이미지 불러오기">
+        불러오기
+        <input type="file" id="uploadInput" accept="image/*" />
+      </label>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <aside class="toolbar">
+      <h2>도구</h2>
+      <div class="tool-grid" id="toolButtons">
+        <button data-tool="brush" class="active">브러시</button>
+        <button data-tool="eraser">지우개</button>
+        <button data-tool="line">선</button>
+        <button data-tool="rectangle">사각형</button>
+        <button data-tool="circle">원</button>
+        <button data-tool="fill">채우기</button>
+        <button data-tool="text">텍스트</button>
+        <button data-tool="eyedropper">스포이드</button>
+      </div>
+
+      <div class="control-group">
+        <label for="colorPicker">색상</label>
+        <input type="color" id="colorPicker" value="#000000" />
+      </div>
+      <div class="control-group">
+        <label for="sizeRange">크기 <span id="sizeValue">12</span>px</label>
+        <input type="range" id="sizeRange" min="1" max="120" value="12" />
+      </div>
+      <div class="control-group">
+        <label for="opacityRange">불투명도 <span id="opacityValue">100</span>%</label>
+        <input type="range" id="opacityRange" min="10" max="100" value="100" />
+      </div>
+      <div class="control-group">
+        <label for="fontSizeRange">텍스트 크기 <span id="fontSizeValue">32</span>px</label>
+        <input type="range" id="fontSizeRange" min="12" max="120" value="32" />
+      </div>
+      <div class="control-group">
+        <label for="fontFamilySelect">글꼴</label>
+        <select id="fontFamilySelect">
+          <option value="Pretendard, sans-serif">Pretendard</option>
+          <option value="Arial, sans-serif">Arial</option>
+          <option value="'Noto Sans KR', sans-serif">Noto Sans KR</option>
+          <option value="'Nanum Gothic', sans-serif">나눔고딕</option>
+          <option value="'Courier New', monospace">Courier</option>
+        </select>
+      </div>
+    </aside>
+
+    <section class="canvas-panel">
+      <div class="canvas-wrapper" id="canvasWrapper">
+        <div id="canvasContainer"></div>
+      </div>
+      <footer class="layers-panel">
+        <div class="layers-header">
+          <h2>레이어</h2>
+          <div class="layer-actions">
+            <button id="addLayerBtn">+ 추가</button>
+            <button id="mergeLayersBtn">병합</button>
+          </div>
+        </div>
+        <ul id="layerList"></ul>
+      </footer>
+    </section>
+  </main>
+
+  <template id="layerItemTemplate">
+    <li class="layer-item">
+      <button class="visibility-toggle" title="표시/숨김">👁</button>
+      <span class="layer-name" contenteditable="true"></span>
+      <div class="layer-controls">
+        <button class="layer-up" title="위로">▲</button>
+        <button class="layer-down" title="아래로">▼</button>
+        <button class="layer-delete" title="삭제">🗑</button>
+      </div>
+    </li>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
