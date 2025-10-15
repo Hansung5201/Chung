@@ -1,0 +1,86 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f1f2f6;
+  color: #2f3542;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  width: 320px;
+  padding: 20px;
+  display: grid;
+  gap: 16px;
+}
+
+.display {
+  background: #1e272e;
+  color: #f5f6fa;
+  font-size: 2.5rem;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: right;
+  word-wrap: break-word;
+  min-height: 72px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 18px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: #dfe4ea;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+button[data-action="clear"],
+button[data-action="backspace"] {
+  background: #ff6b81;
+  color: #ffffff;
+}
+
+button[data-value="/"],
+button[data-value="*"],
+button[data-value="-"],
+button[data-value="+"] {
+  background: #70a1ff;
+  color: #ffffff;
+}
+
+.equals {
+  background: #2ed573;
+  color: #ffffff;
+  grid-row: span 2;
+}
+
+.zero {
+  grid-column: span 2;
+}
