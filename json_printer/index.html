@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JSON Answer Printer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>JSON Answer Printer</h1>
+    <section class="status-panel">
+      <p id="status" aria-live="polite">JSON 데이터를 불러오는 중...</p>
+      <p class="hint">Ctrl + Alt + 숫자: 항목 선택 · Ctrl + Alt + `: 질문 출력</p>
+      <p class="hint">Ctrl + Alt + - : 이전 글자로 이동 · Ctrl + Alt + = : 다음 글자 출력</p>
+      <p class="hint">한글/영문 키를 누르면 선택된 답변을 한 단위씩 출력합니다.</p>
+    </section>
+    <section class="qa-panel">
+      <h2>Question</h2>
+      <div id="question" class="question" aria-live="polite"></div>
+    </section>
+    <section class="answer-panel">
+      <h2>Answer</h2>
+      <div id="answer" class="answer" aria-live="polite"></div>
+    </section>
+  </main>
+  <script src="script.js" type="module"></script>
+</body>
+</html>

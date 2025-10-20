@@ -1,0 +1,14 @@
+[
+  {
+    "question": "JSON 기반 출력 도구는 무엇을 하나요?",
+    "answer": "이 프로그램은 지정한 답변을 한 글자씩 출력합니다."
+  },
+  {
+    "question": "한글은 어떻게 처리되나요?",
+    "answer": "한글은 자음과 모음으로 분리되어 순차적으로 표시됩니다."
+  },
+  {
+    "question": "다음 예시는 무엇인가요?",
+    "answer": "Example answer in English to demonstrate mixed content."
+  }
+]
