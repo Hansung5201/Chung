@@ -3,8 +3,8 @@ from __future__ import annotations
 
 from typing import Iterable, List, Tuple
 
-from .parser import Section
-from .rules import Modification, Rule
+from editer_v2.parser import Section
+from editer_v2.rules import Modification, Rule
 
 
 def apply_rules(sections: Iterable[Section], rules: Iterable[Rule]) -> Tuple[List[Section], List[Modification]]:

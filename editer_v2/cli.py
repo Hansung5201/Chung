@@ -7,9 +7,9 @@ import sys
 from pathlib import Path
 from typing import Iterable, List
 
-from .engine import apply_rules
-from .parser import parse_sections, render_sections
-from .rules import Modification, Rule, RuleCondition
+from editer_v2.engine import apply_rules
+from editer_v2.parser import parse_sections, render_sections
+from editer_v2.rules import Modification, Rule, RuleCondition
 
 
 def load_rules_from_file(path: Path) -> List[Rule]:

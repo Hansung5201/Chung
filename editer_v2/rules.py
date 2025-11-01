@@ -4,7 +4,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import List, Optional
 
-from .parser import Section
+from editer_v2.parser import Section
 
 
 @dataclass(order=True)
