@@ -1,0 +1,27 @@
+{
+  "rules": [
+    {
+      "name": "Head ORFix (Normal)",
+      "priority": 200,
+      "section_pattern": "TextureOverride.*Head",
+      "action_key": "run",
+      "action_value": "CommandList\\global\\ORFix\\ORFix",
+      "conditions": [
+        {"key": "ps-t0", "match_type": "contains", "value": "NormalMap"},
+        {"key": "ps-t1", "match_type": "contains", "value": "Diffuse"},
+        {"key": "ps-t2", "match_type": "contains", "value": "LightMap"}
+      ]
+    },
+    {
+      "name": "Head NNFix",
+      "priority": 100,
+      "section_pattern": "TextureOverride.*Head",
+      "action_key": "run",
+      "action_value": "CommandList\\global\\ORFix\\NNFix",
+      "conditions": [
+        {"key": "ps-t0", "match_type": "contains", "value": "Diffuse"},
+        {"key": "ps-t1", "match_type": "contains", "value": "Light"}
+      ]
+    }
+  ]
+}
